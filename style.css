@@ -1,0 +1,1060 @@
+/* <--------全体設定----------------> */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 80px; /* ヘッダー分のスペースを確保 */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  color: #333;
+}
+
+/* <---------ヘッダー---------------> */
+header {
+  background-color: #fff;
+  color: #ff8c00;
+  padding: 20px 0;
+  position: fixed; /* ヘッダーを固定 */
+  top: 0; /* 上部に固定 */
+  left: 0; /* 左端に固定 */
+  z-index: 1000; /* 他の要素の上に表示されるようにする */
+  padding: 20px 0;
+  position: fixed; /* ヘッダーを固定 */
+  top: 0; /* 上部に固定 */
+  left: 0; /* 左端に固定 */
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* シャドウ効果 */
+}
+
+.header-ber {
+  background-color: rgb(118, 223, 188);
+  color: #ffffff;
+  font-weight: bold;
+  height: 30px;
+  margin-top: -20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-top: 1%;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex; /* ナビゲーション全体をflexboxにする */
+  justify-content: flex-end; /* メニューを右端に配置 */
+  margin-right: 30px; /* メニュー全体を右から30pxだけ左に移動 */
+}
+
+nav ul {
+  display: flex;
+  list-style: none; /* リストのデフォルトのマーカーを削除 */
+  padding: 0;
+  margin: 0;
+  display: flex; /* アイテムを横並びに */
+  justify-content: flex-start; /* アイテムを左寄せ */
+  align-items: center; /* アイテムを縦方向にも中央に配置 */
+}
+
+nav ul li {
+  margin: 0 15px; /* 各リストアイテムの間にスペースを追加 */
+}
+
+nav ul li a {
+  margin-top: 50%;
+  color: rgb(118, 223, 188);
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 30px 5px; /* 上下左右にスペースを追加 */
+}
+
+/* ヘッダー内のボタンコンテナ */
+.header-button {
+  display: flex;
+  justify-content: flex-end; /* 右寄せ */
+  margin-top: 1%;
+  margin-right: -70px; /* 右側に30pxの余白 */
+}
+
+/* ボタンのスタイル */
+.example {
+  display: inline-block;
+  padding: 11px 30px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  border-radius: 100px;
+  text-decoration: none;
+  position: relative;
+  transition: opacity 0.4s ease;
+}
+
+.example:hover {
+  opacity: 0.8;
+}
+
+.example.create {
+  background: #ff5050;
+}
+
+.example.inquiry {
+  background: #ff8c00;
+}
+
+.example.login {
+  background: #558ed5;
+}
+
+.example::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.4s ease;
+  transform: translate(-50%, -50%);
+}
+
+/* メインビジュアル(Top画面) */
+.main-visual {
+  background-image: url("img/top.png");
+  background-size: 60%; /*画像全体サイズ*/
+  background-position: 50% 10%;
+  text-align: center;
+  padding: 450px 10%;
+  background-repeat: no-repeat;
+}
+
+/*<------フローティングボタン1-----> */
+.fb {
+  font-weight: bold;
+  position: fixed; /* 固定位置 */
+  right: 0px; /* 右端に配置 */
+  top: 48%; /* 垂直中央 */
+  transform: translateY(-50%); /* ボタンを完全に中央に */
+  width: 50px; /* 横幅 */
+  height: 250px; /* 縦幅 */
+  background-color: rgb(118, 223, 188); /* 背景色 */
+  color: #ffffff; /* テキスト色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* シャドウ効果 */
+  text-decoration: none; /* アンダーラインを消す */
+  transition: background-color 0.3s ease;
+  writing-mode: vertical-rl; /* テキストを縦書き */
+  z-index: 9999; /* 他の要素より前面に表示 */
+}
+/* ホバー効果 */
+/* .fb:hover {
+  background-color: #ffffff; /* ホバー時の色 */
+/* }  */
+
+/*<------フローティングボタン2--------> */
+.fb2 {
+  font-weight: bold;
+  position: fixed; /* 固定位置 */
+  right: 0px; /* 右端に配置 */
+  top: 72%; /* 垂直中央 */
+  transform: translateY(-50%); /* ボタンを完全に中央に */
+  width: 50px; /* 横幅 */
+  height: 250px; /* 縦幅 */
+  background-color: #ff5050;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  writing-mode: vertical-rl; /* テキスト縦書き */
+  z-index: 9999; /* 他の要素より前面に表示 */
+}
+/* ホバー効果 */
+/* .fb2:hover { */
+/* background-color: #2980b9; ホバー時の色 */
+/* } */
+
+/* <----------フッター--------------> */
+/* フッターの全体スタイル */
+.footer {
+  padding: 0.5rem; /* paddingをさらに減らして高さを縮める */
+  font-size: 15px;
+  color: #999;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 100px;
+  background-color: rgb(118, 223, 188);
+  position: relative; /* これでフッター内の絶対配置の要素が機能します */
+}
+
+.example2 {
+  display: inline-block;
+  padding: 13px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  border-radius: 50px;
+  text-decoration: none;
+  top: -40px; /* 上にずらす */
+  position: relative;
+  transition: opacity 0.4s ease;
+  margin-top: 10px; /* ボタンの位置調整 */
+}
+
+/* ボタンスタイル */
+.example2.create {
+  background: #ff5050;
+  color: #fff;
+  padding: 13px 65px;
+}
+
+.example2.download {
+  background: #ff8c00;
+  color: #fff;
+  padding: 13px 35px;
+}
+
+.example2.inquiry {
+  background: #558ed5;
+  color: #fff;
+  padding: 13px 52px;
+}
+
+/* ロゴの位置を調整 */
+.footer-logo {
+  margin-top: 5px; /* ロゴの位置を上に調整 */
+  color: #ff8c00;
+  padding: 5px 0; /* ロゴの上下パディングを減らす */
+  font-size: 45px;
+  position: relative;
+  top: -10px; /* ロゴの位置を微調整 */
+  left: 0;
+  font-weight: bold;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* フッター内リンク部分を調整 */
+.footer-links {
+  margin-top: 5px; /* 上のマージンを減らす */
+  margin-bottom: 5px; /* 下のマージンも調整 */
+  text-color: #fff;
+  margin: 5px; /* 微調整 */
+}
+
+.link {
+  display: inline-block;
+  padding: 13px 20px;
+  font-size: 16px;
+  color: #fff; /* テキストカラーを白に変更 */
+  text-align: center;
+  margin: 0;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  top: -20px;
+  position: relative;
+  transition: opacity 0.4s ease;
+  margin-top: 10px; /* ボタンの位置調整 */
+}
+
+.link.privacy {
+  margin-top: -10px; /* ボタンの位置調整 */
+  text-decoration-color: rgb(94, 174, 147); /* 下線の色を変更 */
+  text-decoration-line: underline; /* 下線を設定 */
+  text-decoration-style: solid; /* 下線のスタイルを指定 */
+  text-underline-offset: 15px; /* テキストとアンダーバーの間隔を調整 */
+  text-decoration-thickness: 0.1rem; /* 下線の太さ */
+  text-decoration-width: 100%; /* 下線の横幅を伸ばす */
+}
+
+.link.law {
+  margin-top: -10px; /* ボタンの位置調整 */
+  text-decoration-color: rgb(94, 174, 147); /* 下線の色を変更 */
+  text-decoration-line: underline; /* 下線を設定 */
+  text-decoration-style: solid; /* 下線のスタイルを指定 */
+  text-underline-offset: 15px; /* テキストとアンダーバーの間隔を調整 */
+  text-decoration-thickness: 0.1rem; /* 下線の太さ */
+  text-decoration-width: 100%; /* 下線の横幅を伸ばす */
+}
+
+.link.conditions {
+  margin-top: -10px; /* ボタンの位置調整 */
+  text-decoration-color: rgb(94, 174, 147); /* 下線の色を変更 */
+  text-decoration-line: underline; /* 下線を設定 */
+  text-decoration-style: solid; /* 下線のスタイルを指定 */
+  text-underline-offset: 15px; /* テキストとアンダーバーの間隔を調整 */
+  text-decoration-thickness: 0.1rem; /* 下線の太さ */
+  text-decoration-width: 100%; /* 下線の横幅を伸ばす */
+}
+
+.link.company {
+  margin-top: -10px; /* ボタンの位置調整 */
+  text-decoration-color: rgb(94, 174, 147); /* 下線の色を変更 */
+  text-decoration-line: underline; /* 下線を設定 */
+  text-decoration-style: solid; /* 下線のスタイルを指定 */
+  text-underline-offset: 15px; /* テキストとアンダーバーの間隔を調整 */
+  text-decoration-thickness: 0.1rem; /* 下線の太さ */
+  text-decoration-width: 100%; /* 下線の横幅を伸ばす */
+}
+
+/* フッター内リンク部分を調整 */
+.footer-links ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  margin: 0;
+}
+
+/* リストアイテムの間隔を狭める */
+.footer-links ul li {
+  padding-bottom: 1px; /* 追加でパディングを減らす */
+  margin-bottom: 1px; /* 間隔を縮める */
+}
+
+/* リストアイテム内のリンクに関するスタイル */
+.footer-links ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* ホバー時の色変更 */
+.footer-links ul li a:hover {
+  color: #000;
+}
+
+/* フッター全体のレイアウト設定 */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px; /* gapを減らして要素間の間隔を縮める */
+}
+
+.footer-section {
+  font-weight: bold;
+  flex: 1 1 22%;
+  min-width: 200px;
+  margin-top: -30px; /* 上に移動させすぎないように調整 */
+}
+
+.footer-section ul {
+  color: #000000;
+  list-style-type: none; /* 「・」を無くす */
+  padding-left: 0;
+}
+
+/* コピーライト部分 */
+.footer p.copyright {
+  right: 50px;
+  top: 90%;
+  text-align: right;
+  font-size: 14px;
+  margin-top: 1px;
+  color: #333;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 10px;
+}
+
+/* PageTop ボタン */
+.top_btn {
+  width: 80px;
+  height: 80px;
+  background-color: #84c1ff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 120px;
+  top: 70%;
+  transform: translateY(-50%); /* 完全に中央に */
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #ffff84;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.4s;
+  z-index: 9999;
+}
+
+/* 各テキストのスタイル */
+.top_text {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ホバー時のエフェクト */
+.top_btn:hover {
+  opacity: 0.7;
+}
+
+/*<-------------------メインコンテンツ-----------------> */
+/* <------------------QAとは--------------> */
+.qa h2 {
+  text-align: center;
+  font-size: 3rem;
+  /* margin-bottom: 30px; */
+  color: #000000;
+  position: relative; /* これを追加 */
+  height: 550%;
+  padding: 0 0;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+}
+
+.qa h2::before {
+  position: absolute;
+  left: 15%%;
+  bottom: 5px;
+  width: 20%;
+  height: 25px;
+  transform: skew(-45deg);
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(118, 223, 188) 10px 10px
+  );
+  content: "";
+  z-index: -1;
+}
+
+.qa-description {
+  margin-top: 5%;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.space {
+  margin-top: 30px;
+}
+
+.adapt-img {
+  background-image: url("img/adapt.png");
+  background-size: 60%; /*画像全体サイズ*/
+  background-position: 50% 50%;
+  text-align: center;
+  padding: 450px 10%;
+  background-repeat: no-repeat;
+}
+
+/* <---^^^^^------サービス（見出し）---------------> */
+.service h2 {
+  position: relative;
+  padding: 0 0;
+  margin-bottom: 0.2rem;
+  color: #353535;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.service h2::before {
+  position: absolute;
+  left: 45%;
+  bottom: 15px;
+  width: 10%;
+  height: 25px;
+  transform: skew(-45deg);
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(118, 223, 188) 10px 10px
+  );
+  content: "";
+  z-index: -1;
+}
+
+.service-description {
+  margin-top: 5%;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.top-btn {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  background: #fff;
+  color: #737373;
+  padding: 10px;
+  border: solid 1px;
+  border-radius: 50%;
+}
+
+/* <-----------------説明：DX人材になりたい！（タブ切り替え）-------------------------------> */
+
+.dx-study {
+  margin-top: 5rem;
+  background-color: #ff8c00;
+  height: 1250px;
+}
+
+.box1-1,
+.box1-2,
+.box1-3 {
+  margin-left: 18%;
+}
+
+.box1-1 {
+  margin-top: 2rem;
+  background-position: 50% 50%;
+  width: 60%;
+  padding: 2em; /* 内側余白 */
+  border: solid 5px #000000;
+  border-radius: 30px 30px;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.box1-1 h2::before {
+  position: absolute;
+  left: 50%;
+  bottom: 1px;
+  width: 23%;
+  height: 25px;
+  transform: translateX(-50%) skew(-45deg);
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(118, 223, 188) 10px 10px
+  );
+  content: "";
+  z-index: -1;
+}
+
+.box1-1 h2 {
+  position: relative;
+  padding: 0 0;
+  margin-bottom: 0.2rem;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.box1-1 p {
+  margin-top: 1%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box1-1 p {
+  margin-top: 1%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box1-2 {
+  margin-top: 2rem;
+  background-position: 50% 50%;
+  width: 60%;
+  padding: 2em; /* 内側余白 */
+  border: solid 5px #000000;
+  border-radius: 30px 30px;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.box1-2 h2::before {
+  position: absolute;
+  left: 50%;
+  bottom: 1px;
+  width: 23%;
+  height: 25px;
+  transform: translateX(-50%) skew(-45deg);
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(118, 223, 188) 10px 10px
+  );
+  content: "";
+  z-index: -1;
+}
+
+.box1-2 h2 {
+  position: relative;
+  padding: 0 0;
+  margin-bottom: 0.2rem;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.box1-2 p {
+  margin-top: 1%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box1-3 {
+  margin-top: 2rem;
+  background-position: 50% 50%;
+  width: 60%;
+  padding: 2em; /* 内側余白 */
+  border: solid 5px #000000;
+  border-radius: 30px 30px;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.box1-3 h2::before {
+  position: absolute;
+  left: 50%;
+  bottom: 1px;
+  width: 23%;
+  height: 25px;
+  transform: translateX(-50%) skew(-45deg);
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(118, 223, 188) 10px 10px
+  );
+  content: "";
+  z-index: -1;
+}
+
+.box1-3 h2 {
+  position: relative;
+  padding: 0 0;
+  margin-bottom: 0.2rem;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.box1-3 p {
+  margin-top: 1%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.details-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.details-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 80px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px;
+  border-radius: 100px;
+  text-decoration: none;
+  position: relative;
+  transition: opacity 0.4s ease;
+  padding: 10px 25px;
+  background-color: rgb(118, 223, 188);
+}
+
+.details-text h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* <-----------------説明：案件を登録したい！（タブ切り替え）-------------------------------> */
+
+.deal-listed-in {
+  margin-top: 5rem;
+  background-color: rgb(118, 223, 188);
+  height: 1250px;
+}
+
+.box2-1,
+.box2-2,
+.box2-3 {
+  margin-left: 18%;
+}
+
+.box2-1 {
+  margin-top: 2rem;
+  background-position: 50% 50%;
+  width: 60%;
+  padding: 2em;
+  border: solid 5px #000000;
+  border-radius: 30px 30px;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.box2-1 h2::before {
+  position: absolute;
+  width: 23%;
+  height: 25px;
+  background-image: repeating-linear-gradient(90deg, #ff8c00 10px 10px);
+  content: "";
+  left: 50%; /* 中央寄せ */
+  bottom: 1px;
+  transform: translateX(-50%) skew(-45deg); /* translateXで中央に配置 */
+  z-index: -1; /* 擬似要素をh2の後ろに配置 */
+}
+
+.box2-1 h2 {
+  position: relative;
+  padding: 0 0;
+  margin-bottom: 0.2rem;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.box2-1 p {
+  margin-top: 1%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box2-2 {
+  margin-top: 2rem;
+  background-position: 50% 50%;
+  width: 60%;
+  padding: 2em;
+  border: solid 5px #000000;
+  border-radius: 30px 30px;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.box2-2 h2::before {
+  position: absolute;
+  width: 23%;
+  height: 25px;
+  background-image: repeating-linear-gradient(90deg, #ff8c00 10px 10px);
+  content: "";
+  left: 50%;
+  bottom: 1px;
+  transform: translateX(-50%) skew(-45deg);
+  z-index: -1;
+}
+
+.box2-2 h2 {
+  position: relative;
+  padding: 0 0;
+  margin-bottom: 0.2rem;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.box2-2 p {
+  margin-top: 1%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box2-3 {
+  margin-top: 2rem;
+  background-position: 50% 50%;
+  width: 60%;
+  padding: 2em;
+  border: solid 5px #000000;
+  border-radius: 30px 30px;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.box2-3 h2::before {
+  position: absolute;
+  width: 23%;
+  height: 25px;
+  background-image: repeating-linear-gradient(90deg, #ff8c00 10px 10px);
+  content: "";
+  left: 50%;
+  bottom: 1px;
+  transform: translateX(-50%) skew(-45deg);
+  z-index: -1;
+}
+
+.box2-3 h2 {
+  position: relative;
+  padding: 0 0;
+  margin-bottom: 0.2rem;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.box2-3 p {
+  margin-top: 1%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.details-button2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.details-text2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 80px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px;
+  border-radius: 100px;
+  text-decoration: none;
+  position: relative;
+  transition: opacity 0.4s ease;
+  padding: 10px 25px;
+  background-color: #ff8c00;
+}
+
+.details-text2 h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* <-----------------お知らせ-----------------------> */
+.news {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.news h2 {
+  font-size: 3rem;
+  text-after: center;
+}
+
+.news h1,
+.news h2,
+.news p {
+  margin: 0 140px;
+}
+
+.news-list {
+  list-style: none;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 0;
+  font-size: 20px;
+  margin-right: 10%;
+}
+
+.news-list .item p {
+  margin: 5px 0px;
+}
+
+.news-list .item a {
+  display: flex;
+  margin-top: 2%;
+  text-decoration: none;
+  padding: 0px;
+  width: 1300px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #ff8c00;
+  border-radius: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.news-list .item .date {
+  min-width: 140px;
+}
+
+.news-list .item {
+  margin-right: 20px;
+}
+
+.news-list .item .title {
+  width: 100%;
+  color: #ffffff;
+}
+
+.details-button3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.details-text3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 80px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px;
+  border-radius: 100px;
+  text-decoration: none;
+  position: relative;
+  transition: opacity 0.4s ease;
+  padding: 10px 25px;
+  background-color: #ff8c00;
+}
+
+.details-text3 h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* <------------------------お問い合わせ・FAQ-----------------------------> */
+.url {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  gap: 5%;
+}
+
+.faq,
+.inquiry-2 {
+  width: 500px;
+  height: 400px;
+  background-color: rgb(118, 223, 188);
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+.faq h2,
+.inquiry-2 h2 {
+  color: #000000;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.faq p,
+.inquiry-2 p {
+  margin-top: 7%;
+  color: #000000;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.details-button4 {
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+  justify-content: center;
+}
+
+.details-button5 {
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+  justify-content: center;
+}
+
+.details-text4,
+.details-text5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 80px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px;
+  border-radius: 100px;
+  text-decoration: none;
+  position: relative;
+  transition: opacity 0.4s ease;
+  padding: 10px 25px;
+  background-color: #ff8c00;
+}
+
+.details-text4 h1,
+.details-text5 h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
