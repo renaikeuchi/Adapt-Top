@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>【QA】トップ画面</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   </head>
 </html>
 
@@ -36,15 +37,16 @@
         <li><a href="#">よくある質問</a></li>
         <li><a href="#">運営会社</a></li>
       </ul>
-  </nav>
+    </nav>
     
   
-  <section class="main-visual"></section>
+  <section class="main-visual">
+  </section>
     <!-- フローティングボタン -->
     <a href="#" class="fb">資 料 ダ ウ ン ロ ー ド</a>
     <a href="#" class="fb2">無 料 会 員 登 録</a>
 
-    <main>
+  <main>
       <section class="qa">
         <h2>QualityAdaptとは?</h2>
           <div class="qa-description">
@@ -68,58 +70,70 @@
           それぞれの方へ、本サービスの特徴をご紹介します。<br/>
         </div>    
       </section>
-      <section class="dx-study"><br/>
-        <div class="box1-1">
-          <h2>DXを勉強する</h2>
-          <p>QualityCubeSchoolでDXスキル教育を受講できます。<br/>
-            即戦力で活躍できる教育プランを提供しており、<br/>
-            実践的なスキルを身につけることができます。<br/>
-          </p>
-        </div>
-        <div class="box1-2">
-          <h2>資格を取得する</h2>
-          <p>QualityCubeSchoolではコース修了時にDXスキルの認定試験を実施しています。<br/>
-            試験に合格された方にはDX推進スキル保有者として資格認定書を発行します。<br/>
-          </p>
-        </div>
-        <div class="box1-3">
-          <h2>スカウトを受ける</h2>
-          <p>条件をご登録いただくことで、各企業の担当者からスカウトメールを受け取ることが<br/>
-            できます。<br/>
-          </p>
-        </div>
-        <div class="details-button">
-          <a href="#" class="details-text"><h1>詳しくはこちら</h1></a>
-        </div>
-      </section>
 
-      <section class="deal-listed-in"><br/>
-        <div class="box2-1">
-          <h2>DXを勉強する</h2>
-          <p>QualityCubeSchoolでDXスキル教育を受講できます。<br/>
-            即戦力で活躍できる教育プランを提供しており、<br/>
-            実践的なスキルを身につけることができます。<br/>
-          </p>
-        </div>
-        <div class="box2-2">
-          <h2>資格を取得する</h2>
-          <p>QualityCubeSchoolではコース修了時にDXスキルの認定試験を実施しています。<br/>
-            試験に合格された方にはDX推進スキル保有者として資格認定書を発行します。<br/>
-          </p>
-        </div>
-        <div class="box2-3">
-          <h2>スカウトを受ける</h2>
-          <p>条件をご登録いただくことで、各企業の担当者からスカウトメールを受け取ることが<br/>
-            できます。<br/>
-          </p>
-        </div>
-        <div class="details-button2">
-          <a href="#" class="details-text2"><h1>COMING SOON・・・</h1></a>
+      <section class="dx-study"><br/>
+        <div class="tabs">
+          <input id="all" type="radio" name="tab_item" checked>
+          <label class="tab_item1" for="all">
+            <img src="img/image1.png" alt="Icon">
+            <h2>DX人材になりたい！</h2>
+          </label>
+          <input id="programming" type="radio" name="tab_item">
+          <label class="tab_item2" for="programming">
+            <img src="img/image2.png" alt="Icon">
+            <h2>案件を掲載したい！</h2>
+          </label>
+          <div class="tab_content" id="all_content">
+            <div class="deal-listed"><br/>
+              <div class="box1-1">
+                <h2>DXを勉強する</h2>
+                  <p>QualityCubeSchoolでDXスキル教育を受講できます。<br/>
+                    即戦力で活躍できる教育プランを提供しており、<br/>
+                    実践的なスキルを身につけることができます。<br/>
+                  </p>
+              </div>
+              <div class="box1-2">
+                <h2>資格を取得する</h2>
+                  <p>QualityCubeSchoolではコース修了時にDXスキルの認定試験を実施しています。<br/>
+                    試験に合格された方にはDX推進スキル保有者として資格認定書を発行します。<br/>
+                  </p>
+              </div>
+              <div class="box1-3">
+                <h2>スカウトを受ける</h2>
+                  <p>条件をご登録いただくことで、各企業の担当者からスカウトメールを受け取ることが<br/>
+                    できます。<br/>
+                  </p>
+              </div>
+              <div class="details-button">
+                <a href="#" class="details-text"><h1>詳しくはこちら</h1></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab_content2" id="programming_content">
+            <div class="deal-listed-in"><br/>
+              <div class="box2-1">
+                <h2>案件を登録する</h2>
+                  <p>「案件情報」「条件」「一般公開or限定公開」などを選択し、案件を登録できます。<br/>
+                  </p>
+              </div>
+              <div class="box2-2">
+                <h2>人材を探す</h2>
+                  <p>「キーワード検索」「認定資格レベル」「ユーザー評価」「稼働日数」など、<br/>
+                    さまざまな条件で貴社のニーズにあったDX人材を探すことができます。<br/>
+                  </p>
+              </div>
+              <div class="details-button2">
+                <a href="#" class="details-text2"><h1>COMING SOON・・・</h1></a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <!-- </section> -->
       
       <!-- お知らせ欄 -->
-      <section class="news">
+    <section class="news">
       <div>
         <h1>News</h1>
         <h2>お知らせ</h2>
@@ -127,34 +141,34 @@
           最新情報をご紹介します。
         </h1>
         <div class="details-button3">
-          <a  class="details-text3"><h1>一覧で見る</h1></a>
+          <a  class="details-text3"><h1>一覧で見る</h1><img src="img/btn.png" alt="Icon"></a>
         </div>
       </div>
         <ul class="news-list">
           <li class="item">
             <a>
               <p class="date">2025/○○/××</p>
-              <p class="title">～～～～～～～～～～～～～～～～～～</p>
+              <p class="title">～～～～～～～～～～～～～～～～～～<img src="img/btn.png" alt="Icon"></p>
             </a>
           </li>
           <li class="item">
             <a>
               <p class="date">2025/○○/××</p>
-              <p class="title">～～～～～～～～～～～～～～～～～～</p>
+              <p class="title">～～～～～～～～～～～～～～～～～～<img src="img/btn.png" alt="Icon"></p>
             </a>
           </li>
           <li class="item">
             <a>
               <p class="date">2025/○○/××</p>
-              <p class="title">～～～～～～～～～～～～～～～～～～</p>
+              <p class="title">～～～～～～～～～～～～～～～～～～<img src="img/btn.png" alt="Icon"></p>
             </a>
           </li>
         </ul>
-      </section>
+    </section>
 
-      <section class="url">
+    <section class="url">
         <div class="faq">
-          <br/><h2>よくある質問</h2><br/>
+          <br/><h2><img src="img/faq.png" alt="Icon" class="faq-icon">よくある質問</h2><br/>
           <p>サービスについての疑問を解決！<br/>
             よくある質問をご覧ください。</p>
           <div class="details-button4">
@@ -162,7 +176,7 @@
           </div>
         </div>
         <div class="inquiry-2">
-          <br/><h2>お問い合わせ</h2><br/>
+          <br/><h2><img src="img/faq2.png" alt="Icon" class="faq2-icon">お問い合わせ</h2><br/>
           <p>QualityAdaptに関するご不明点や<br/>
             ご相談があれば、お気軽にお問い<br/>合わせください。
           </p>
@@ -170,11 +184,11 @@
             <a class="details-text5"><h1>お問い合わせはこちら</h1></a>
           </div>
         </div>
-      </section>      
-    </main>
+    </section>      
+  </main>
 
     <!-- フッター -->
-    <footer class="footer">
+  <footer class="footer">
       <div class="footer-container">
         <div class="footer-logo">
           QualityAdapt
@@ -201,16 +215,11 @@
             <li><a href="#">▶　お知らせ</a></li>
             <li><a href="#">▶　よくある質問</a></li>
           </ul>
-    
-          <div href="#"class="top_btn">
-            <span class="top_text">Page</span>
-            <span class="top_text">Top</span>
-          </div>
         </div>
       </div>
+
+      <a href="#" id="page-top"><i class="fas fa-chevron-up"></i></a>
     
-      <!-- コピーライト部分 -->
-      <p class="copyright">© 2025 Example Inc. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
